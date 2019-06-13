@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2019-06-12T15:15:59+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2019-06-14T02:13:12+05:30
+ * @Last modified time: 2019-06-14T02:29:00+05:30
  */
 
 import {
@@ -17,6 +17,11 @@ import {
 } from "./types";
 import qs from "qs";
 import axios from "axios";
+
+/**
+ * [fetchShipmentData description]
+ * @return {[type]} [description]
+ */
 
 export const fetchShipmentData = () => async (dispatch, getState) => {
   try {
@@ -34,6 +39,13 @@ export const fetchShipmentData = () => async (dispatch, getState) => {
     });
   }
 };
+
+/**
+ * [updateShipmentName description]
+ * @param  {[type]} data  [description]
+ * @param  {[type]} index [description]
+ * @return {[type]}       [description]
+ */
 
 export const updateShipmentName = (data, index) => async (
   dispatch,
@@ -58,6 +70,12 @@ export const updateShipmentName = (data, index) => async (
   }
 };
 
+/**
+ * [shipmentDetailFetch description]
+ * @param  {[type]} shipmentId [description]
+ * @return {[type]}            [description]
+ */
+
 export const shipmentDetailFetch = shipmentId => async (dispatch, getState) => {
   dispatch(initialDetailsData());
   try {
@@ -79,6 +97,11 @@ export const shipmentDetailFetch = shipmentId => async (dispatch, getState) => {
   }
 };
 
+/**
+ * [setSearchResults description]
+ * @param {[type]} data [description]
+ */
+
 export const setSearchResults = data => async (dispatch, getState) => {
   dispatch({
     type: SET_SEARCH_RESULTS,
@@ -86,6 +109,10 @@ export const setSearchResults = data => async (dispatch, getState) => {
   });
 };
 
+/**
+ * [initfetchRepoData description]
+ * @return {[type]} [description]
+ */
 export const initfetchRepoData = () => {
   return {
     type: INIT_SEARCH_REQUEST,
@@ -93,6 +120,10 @@ export const initfetchRepoData = () => {
   };
 };
 
+/**
+ * [initialDetailsData description]
+ * @return {[type]} [description]
+ */
 export const initialDetailsData = () => {
   return {
     type: INIT_FETCH_SHIPMENT_DETAILS,
