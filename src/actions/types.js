@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2019-06-12T15:16:20+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2019-06-13T17:51:56+05:30
+ * @Last modified time: 2019-06-14T02:08:25+05:30
  */
 export const GET_SHIPMENT_DATA = "GET_SHIPMENT_DATA";
 export const SHIPMENT_RESULTS_FAIL = "SHIPMENT_RESULTS_FAIL";
@@ -11,3 +11,4 @@ export const UPDATE_NAME_FAIL = "UPDATE_NAME_FAIL";
 export const FETCH_SHIPMENT_DETAILS = "FETCH_SHIPMENT_DETAILS";
 export const SHIPMENT_DETAILS_FAIL = "SHIPMENT_DETAILS_FAIL";
 export const INIT_FETCH_SHIPMENT_DETAILS = "INIT_FETCH_SHIPMENT_DETAILS";
+export const SET_SEARCH_RESULTS = "SET_SEARCH_RESULTS";

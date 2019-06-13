@@ -8,6 +8,7 @@
     "axios-mock-adapter": "^1.16.0",
     "babel-polyfill": "^6.26.0",
     "fetch-mock": "^7.3.3",
+    "fuse.js": "^3.4.5",
     "json-server": "^0.15.0",
     "moment": "^2.24.0",
     "moxios": "^0.4.0",

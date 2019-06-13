@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2019-06-12T14:45:24+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2019-06-13T19:25:30+05:30
+ * @Last modified time: 2019-06-14T01:55:13+05:30
  */
 
 import React, { Fragment, Component } from "react";
@@ -109,7 +109,6 @@ const CargoGrid = ({ cargo }) => {
 };
 
 function mapStateToProps({ shipmentStack }) {
-  console.log(shipmentStack, "details");
   return {
     detailGrid: shipmentStack.shipmentDetails,
     isFetching: shipmentStack.isFetching

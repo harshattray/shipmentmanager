@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2019-06-12T15:15:59+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2019-06-13T17:53:40+05:30
+ * @Last modified time: 2019-06-14T02:13:12+05:30
  */
 
 import {
@@ -12,7 +12,8 @@ import {
   UPDATE_NAME_FAIL,
   FETCH_SHIPMENT_DETAILS,
   SHIPMENT_DETAILS_FAIL,
-  INIT_FETCH_SHIPMENT_DETAILS
+  INIT_FETCH_SHIPMENT_DETAILS,
+  SET_SEARCH_RESULTS
 } from "./types";
 import qs from "qs";
 import axios from "axios";
@@ -38,7 +39,6 @@ export const updateShipmentName = (data, index) => async (
   dispatch,
   getState
 ) => {
-  console.log(index, "updindex");
   try {
     const res = await axios.put(
       `http://localhost:3003/shipments/${data.id}`,
@@ -79,12 +79,19 @@ export const shipmentDetailFetch = shipmentId => async (dispatch, getState) => {
   }
 };
 
-function initfetchRepoData() {
+export const setSearchResults = data => async (dispatch, getState) => {
+  dispatch({
+    type: SET_SEARCH_RESULTS,
+    payload: data
+  });
+};
+
+export const initfetchRepoData = () => {
   return {
     type: INIT_SEARCH_REQUEST,
     isLoading: true
   };
-}
+};
 
 export const initialDetailsData = () => {
   return {

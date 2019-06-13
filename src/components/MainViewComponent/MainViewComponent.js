@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2019-06-12T14:44:10+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2019-06-13T20:04:18+05:30
+ * @Last modified time: 2019-06-14T02:04:33+05:30
  */
 
 import React, { Fragment, Component } from "react";
@@ -22,6 +22,7 @@ import {
   updateShipmentName
 } from "../../actions/fetchShipmentActions";
 import { columns, ItemView } from "../../utilities/utilities";
+import SearchViewComponent from "../SearchViewComponent/SearchViewComponent";
 
 const ContextView = React.createContext();
 
@@ -155,9 +156,11 @@ class MainViewComponent extends Component {
         })
       };
     });
-    console.log(shipmentGrid, "shipment");
     return (
       <Fragment>
+        <div className="search">
+          <SearchViewComponent history={history} />
+        </div>
         {isLoading ? (
           <Segment>
             <Dimmer active inverted>

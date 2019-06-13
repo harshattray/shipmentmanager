@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2019-05-13T22:46:53+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2019-06-13T19:33:56+05:30
+ * @Last modified time: 2019-06-14T02:04:53+05:30
  */
 
 
@@ -54,4 +54,8 @@
   margin-top: 50px !important;
   font-weight: 300;
   color: white;
+}
+
+.search {
+  padding: 10px
 }

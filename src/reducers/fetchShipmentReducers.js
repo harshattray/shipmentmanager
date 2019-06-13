@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2019-06-12T15:23:44+05:30
  * @Last modified by:   harsha
- * @Last modified time: 2019-06-13T17:44:54+05:30
+ * @Last modified time: 2019-06-14T02:14:08+05:30
  */
 
 import {
@@ -11,12 +11,14 @@ import {
   UPDATE_NAME_DATA,
   UPDATE_NAME_FAIL,
   FETCH_SHIPMENT_DETAILS,
-  SHIPMENT_DETAILS_FAIL
+  SHIPMENT_DETAILS_FAIL,
+  SET_SEARCH_RESULTS
 } from "../actions/types";
 
 const initial_state = {
   isFetching: true,
-  shipmentList: []
+  shipmentList: [],
+  searchResults: []
 };
 
 export default (state = initial_state, action) => {
@@ -44,10 +46,14 @@ export default (state = initial_state, action) => {
         isFetching: action.isFetching
       };
     case SHIPMENT_DETAILS_FAIL:
-      console.log(action.payload);
       return {
         ...state,
         error: action.payload
+      };
+    case SET_SEARCH_RESULTS:
+      return {
+        ...state,
+        searchResultsStack: action.payload
       };
     default:
       return state;
